@@ -1,0 +1,152 @@
+
+.container-gallery{
+    /* border: solid 1px red; */
+    width: 85%;
+    margin: auto;
+}
+
+.gallery{
+    column-count: 3;
+    column-width: 33%;
+    /* position: relative; */
+    overflow: hidden;
+   
+}
+
+@media (max-width:991px) {
+    .gallery{
+        column-count:2;
+        column-width:50%;
+    }
+}
+
+@media (max-width:550px) {
+    .gallery{
+        column-count:1;
+        column-width:50%;
+    }
+}
+
+.pics{
+    margin-top: 16px;
+    /* border: solid 1px black; */
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 10px;
+    /* margin-left: 10px; */
+}
+
+.pics:hover .pics-overlay{
+    opacity: 0.6;
+    transition: all linear 0.30s;
+}
+
+.pics:hover .pics-plus{
+    opacity: 1;
+    transition: all linear 0.40s;
+}
+
+.tabs{
+    width: 80%;
+    margin: auto;
+    margin-bottom: 50px;
+    height: max-content;
+    /* padding-top: 5px; */
+    padding: 5px 5px 5px 5px;
+}
+
+/* //// */
+
+/* DynamicTabs.css */
+
+/* Customize tab font size and color */
+.custom-tabs .ant-tabs-tab {
+    font-size: 16px; /* Adjust the font size */
+    color: #333;    /* Adjust the font color */
+  }
+  
+  /* Customize tab hover color */
+  .custom-tabs .ant-tabs-tab:hover {
+    color: #ff9900; /* Adjust the hover color */
+  }
+  
+  .custom-tabs .ant-tabs-tab-active, /* Target active tab */
+  .custom-tabs .ant-tabs-tab-active:hover { /* Target active tab on hover */
+    color: #ff5500; /* Adjust the active tab color */
+  }
+
+  /* /////////////////// */
+
+  .pics-overlay{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: 0;
+    z-index:  50;
+    /* border: solid 5px red; */
+  }
+
+  .pics-plus{
+    color: white;
+    position: absolute;
+    z-index: 60;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 40px;
+    opacity: 0;
+  }
+
+  .pics-label{
+    font-size: 25px;
+    color: white;
+    opacity: 1;
+    bottom: -20%;
+    margin: auto;
+    z-index: 60;
+    position: absolute;
+    transition: all ease-out 0.35s;
+  }
+
+  .pics:hover .pics-label{
+    bottom: 55px;
+  }
+
+  .pics-cate{
+    position: absolute;
+    font-size: 22px;
+    color: white;
+    z-index: 60;
+    bottom: -20%;
+    margin: auto;
+    /* bottom: -20%; */
+    transition: all ease-out 0.45s;
+  }
+
+  .pics:hover .pics-cate{
+    bottom: 25px;
+  }
+
+  .modal-content{
+    height: 90vh;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    
+  }
+
+/* Custom styles to visually hide title and close button */
+.custom-modal .ant-modal-header {
+    visibility: hidden;
+    height: 0;
+    padding: 0;
+  }
+  
+  .custom-modal .ant-modal-close {
+    display: none;
+  }

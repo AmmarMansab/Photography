@@ -1,0 +1,13 @@
+.boot-video{
+    height: 100%;
+    width: 100%;
+}
+
+.video-modal-main{
+    height: 80vh;
+    width: 100%;
+    /* border: solid 1px red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
